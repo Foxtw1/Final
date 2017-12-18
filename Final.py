@@ -81,6 +81,18 @@ def solve_algebra():
         divide = multiplied_and_subtracted[d] / percent_of_final[d]
         done.append(divide)
 
+    turn_done_to_non_percent = []
+    for w in range(len(done)):
+        turn_done_to_non_percent.append(done[w] * float(100))
+
+
+    for w in range(len(turn_done_to_non_percent)):
+        print "In", classes[w], "you need a", turn_done_to_non_percent[w]
+
+
+    return "Good Luck!"
+        
+
 
 
 print solve_algebra()
