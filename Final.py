@@ -44,3 +44,43 @@ def solve_algebra():
         return "The lengths don't match up. Try again"
     
     
+    Grades_in_percentages = []
+    for i in range(len(grades)):
+        grade = int(float(grades[i]))
+        grade = grade * float(0.01)
+        Grades_in_percentages.append(grade)
+
+    percent_completed = []
+    for p in range(len(percentages)):
+        percentage = float(int(percentages[p]))
+        percentage = percentage * float(0.01)
+        percent_completed.append(float(1) - percentage)
+
+
+    percent_of_final = []
+    for f in range(len(percentages)):
+        percentage = float(int(percentages[f]))
+        percentage = percentage * float(0.01)
+        percent_of_final.append(percentage)
+
+    multiplied = []
+    for p in range(len(percent_completed)):
+        mutiply = (percent_completed[p] * Grades_in_percentages[p])
+        multiplied.append(mutiply)
+
+    grade_wanted = float(int(grade_wanted)) * float(0.01)
+    
+    multiplied_and_subtracted = []
+    for f in range(len(multiplied)):
+        subtract = grade_wanted - multiplied[f]
+        multiplied_and_subtracted.append(subtract)
+
+
+    done = []
+    for d in range(len(multiplied_and_subtracted)):
+        divide = multiplied_and_subtracted[d] / percent_of_final[d]
+        done.append(divide)
+
+
+
+print solve_algebra()
