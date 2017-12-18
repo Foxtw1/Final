@@ -33,3 +33,14 @@ def input_grade_wanted():
     return grade_wanted
 
 
+def solve_algebra():
+    classes = input_classes()
+    grades = input_grade()
+    percentages = input_percentages()
+    grade_wanted = input_grade_wanted()
+
+
+    if len(classes) != len(grades) or len(grades) != len(percentages):
+        return "The lengths don't match up. Try again"
+    
+    
